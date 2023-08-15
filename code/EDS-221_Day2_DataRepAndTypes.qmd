@@ -3,6 +3,9 @@ title: "EDS-221_Day2_DataRepAndTypes"
 author: "OP"
 format: html
 editor: visual
+execute: 
+  echo: false
+  warning: false
 ---
 
 ## 
