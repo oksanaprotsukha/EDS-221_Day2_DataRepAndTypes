@@ -97,3 +97,31 @@ trees[i]
 trees[3] <- "maple"
 trees
 ```
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+```
+
+```{r}
+# --- data frame with two columns and each vector has 3 elements
+
+dogs <- data.frame(name = c("teddy", "banjo", "waffle"), age = c(5, 8, 2))
+dogs
+
+# --- Get Banjo's age (row 2 , column 2)
+dogs[2,2]
+
+# --- Get a name of a given vector position
+
+dogs$name[2]
+dogs$age[2]
+```
+
+```{r}
+# --- Get a value for a given element using a filter
+
+waffle_age <- dogs[dogs$name == "waffle",]$age
+waffle_age
+
+```
