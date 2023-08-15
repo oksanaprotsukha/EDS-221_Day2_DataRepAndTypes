@@ -125,3 +125,21 @@ waffle_age <- dogs[dogs$name == "waffle",]$age
 waffle_age
 
 ```
+
+### Matrix indexing
+
+```{r}
+
+fish_size <- matrix(c(0.8, 1.2, 0.4, 0.9), ncol = 2, nrow = 2, byrow = FALSE)
+
+fish_size
+class(fish_size)
+typeof(fish_size)
+str(fish_size)
+
+# --- Get an element in the position A22
+fish_size[2,2]
+
+# --- Get all elements in colum #2
+fish_size[, 2]
+```
