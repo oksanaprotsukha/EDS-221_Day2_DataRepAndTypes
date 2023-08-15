@@ -8,6 +8,10 @@ execute:
   warning: false
 ---
 
+```{r}
+library(tidyverse)
+```
+
 ## Making and indexing data in R
 
 ### Vectors
@@ -170,4 +174,26 @@ sample2 <- c(3,4,1,6,7,4,8,9,0)
 ttest_example <- t.test(sample1, sample2)
 
 ttest_example$p.value
+```
+
+### Data frames
+
+```{r}
+# --- make a data frame
+
+fruit <- data.frame(c("apple", "pear", "peach"), mass =c(130, 195, 150))
+
+fruit[3, 2]
+
+purrr::pluck(fruit, "type", 2)
+
+fruit$type[2]
+```
+
+```{r}
+# --- Get the 2nd element in the vector starships
+# --- vector starships >> c("X-wing", "Imperial shuttle")
+starwars$starships[[1]][2]
+
+purrr::pluck(starwars, "starships", 1, 2)
 ```
