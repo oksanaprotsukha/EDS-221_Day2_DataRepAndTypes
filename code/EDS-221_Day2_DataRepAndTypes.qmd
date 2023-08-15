@@ -8,4 +8,92 @@ execute:
   warning: false
 ---
 
-## 
+## Making and indexing data in R
+
+### Vectors
+
+```{r}
+dogs <- c("teddy", "knora", "waffle", "banjo", "tallie", "shery")
+
+# --- check class of dogs
+typeof(dogs)
+class(dogs)
+```
+
+```{r}
+myBreakfast <- c("waffles", 2, TRUE, "coffee")
+
+typeof(myBreakfast)
+```
+
+```{r}
+weights <- c(50, 60, 25, 35, 55)
+typeof(weights)
+class(weights)
+```
+
+```{r}
+weights_integer <- c(50L, 60L, 25L, 35L, 55L)
+typeof(weights_integer)
+class(weights_integer)
+```
+
+```{r}
+
+zipcodes <- c(93105, 93104, 93101, 93401)
+
+class(zipcodes)
+
+# --- Use as. family of functions to recast a type from one type to another type
+# --- Use is. family of functions to ASK a type what class something is
+zipcodes_chr <- as.character(zipcodes)
+
+```
+
+### Create a vector with named elements
+
+```{r}
+dog_food <- c(teddy = "purina", knora = "alpo", waffle = "fancy feast", banjo = "blue diamond", tallie = "farmer's dog")
+class(dog_food)
+
+test <- c(cat = 4, dog = 10, elephant = 11)
+class(test)
+typeof(test)
+```
+
+```{r}
+# --- access a value of the element in the vector
+# --- R uses 1-index (IMPORTANT diff with other languages)
+
+dog_food[2]
+dog_food["knora"]
+```
+
+### Access ranges of values in a vector
+
+Use: to refer to a range (low : high)
+
+```{r}
+trees <- c("ponderosa", "lodgepole", "jeffrey", "sugar", "white", "bristlecone", "redwood", "oak")
+trees[3]
+trees[3:5]
+```
+
+### Warm-up for "for loops"
+
+```{r}
+i <- 4
+trees [i]
+
+```
+
+```{r}
+# --- same thing as seq(from = 1 to = 3)
+i <- seq(from = 1, to = 3)
+trees[i]
+```
+
+```{r}
+trees[3] <- "maple"
+trees
+```
